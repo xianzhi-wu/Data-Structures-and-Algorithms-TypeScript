@@ -1,4 +1,4 @@
-import swap from './swap'; 
+import swap from '../utils/swap'; 
 
 class Selection {
   // The sort method is a generic method that sorts an array of any type T

@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var swap_1 = require("./swap");
+var swap_1 = require("../utils/swap");
 var Selection = /** @class */ (function () {
     function Selection() {
     }
