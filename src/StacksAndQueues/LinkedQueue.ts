@@ -32,7 +32,7 @@ class LinkedQueue<T> {
     }
 
     const item = this.first!.getItem(); // Get the item from the first node. ! - Non-null assertation.
-    this.first = this.first!.getNext(); // Move the first pointer to the next node
+    this.first = this.first!.getNext(); // Move the first pointer to the next node. 
 
     if (this.isEmpty()) {
       // If the queue is now empty, set the last pointer to null
