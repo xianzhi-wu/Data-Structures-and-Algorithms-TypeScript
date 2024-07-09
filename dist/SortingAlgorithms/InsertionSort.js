@@ -29,11 +29,11 @@ var Insertion = /** @class */ (function () {
     };
     return Insertion;
 }());
-// Create an instance of the Insertion class
-var insertion = new Insertion();
-// Define an array of numbers to be sorted
-var arr = [3, 5, 2, 6, 1, 0, 7, 4, 0, 2];
-// Call the sort method to sort the array
-insertion.sort(arr);
-// Log the sorted array to the console
-console.log(arr); // Output: [0, 0, 1, 2, 2, 3, 4, 5, 6, 7]
+// // Create an instance of the Insertion class
+// const insertion = new Insertion();
+// // Define an array of numbers to be sorted
+// const arr = [3, 5, 2, 6, 1, 0, 7, 4, 0, 2];
+// // Call the sort method to sort the array
+// insertion.sort(arr);
+// // Log the sorted array to the console
+// console.log(arr); // Output: [0, 0, 1, 2, 2, 3, 4, 5, 6, 7]
