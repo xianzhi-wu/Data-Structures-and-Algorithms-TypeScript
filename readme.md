@@ -1,1 +1,1 @@
-# Data Structures and Algorithms - TypeScript
+# Algorithms, Part I by Princeton University (TypeScript Version)
