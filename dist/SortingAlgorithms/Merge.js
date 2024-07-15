@@ -1,8 +1,10 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.merge = void 0;
 var Merge = /** @class */ (function () {
     function Merge() {
     }
-    Merge.prototype.sort = function (arr, aux, lo, hi) {
+    Merge.sort = function (arr, aux, lo, hi) {
         // Base case
         if (hi <= lo) {
             return;
@@ -12,9 +14,9 @@ var Merge = /** @class */ (function () {
         this.sort(arr, aux, lo, mid);
         this.sort(arr, aux, mid + 1, hi);
         // Merge two halves.
-        this.merge(arr, aux, lo, mid, hi);
+        Merge.merge(arr, aux, lo, mid, hi);
     };
-    Merge.prototype.merge = function (arr, aux, lo, mid, hi) {
+    Merge.merge = function (arr, aux, lo, mid, hi) {
         // Copy elements to the auxiliary array
         for (var k = lo; k <= hi; k++) {
             aux[k] = arr[k];
@@ -41,10 +43,12 @@ var Merge = /** @class */ (function () {
     };
     return Merge;
 }());
+// Export the merge function
+exports.merge = Merge.merge;
 var arr = [2, 1, 3, 6, 5, 7, 9, 8, 0];
 var aux = [];
 var lo = 0;
 var hi = arr.length - 1;
-var merge = new Merge;
-merge.sort(arr, aux, lo, hi);
+//const ms = new Merge<number>;
+Merge.sort(arr, aux, lo, hi);
 console.log(arr);

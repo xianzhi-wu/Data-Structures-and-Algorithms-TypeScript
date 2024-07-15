@@ -1,5 +1,5 @@
-class Merge<T> {
-    public sort(arr: T[], aux: T[], lo: number, hi: number): void {
+class Merge {
+    public static sort<T>(arr: T[], aux: T[], lo: number, hi: number): void {
         // Base case
         if (hi <= lo) {
             return;
@@ -11,10 +11,10 @@ class Merge<T> {
         this.sort(arr, aux, mid + 1, hi);
 
         // Merge two halves.
-        this.merge(arr, aux, lo, mid, hi);
+        Merge.merge(arr, aux, lo, mid, hi);
     }
 
-    public merge(arr: T[], aux: T[], lo: number, mid: number, hi: number) {
+    public static merge<T>(arr: T[], aux: T[], lo: number, mid: number, hi: number): void {
         // Copy elements to the auxiliary array
         for (let k: number = lo; k <= hi; k++) {
             aux[k] = arr[k];
@@ -39,12 +39,15 @@ class Merge<T> {
     }
 }
 
+// Export the merge function
+export const merge = Merge.merge;
+
 let arr: number[] = [2, 1, 3, 6, 5, 7, 9, 8, 0];
 let aux: number[] = [];
 
 const lo = 0;
 const hi = arr.length - 1;
-const merge = new Merge<number>;
-merge.sort(arr, aux, lo, hi);
+//const ms = new Merge<number>;
+Merge.sort(arr, aux, lo, hi);
 
 console.log(arr);
